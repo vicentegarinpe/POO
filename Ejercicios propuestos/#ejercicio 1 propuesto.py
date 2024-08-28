@@ -44,7 +44,7 @@ print(f"edad:{persona1.edad}")
 
 #promedio notas
 
-persona1.promedio_asignatura(3.5, 4.0, 5.0)  
+persona1.promedio_asignatura(3.4, 4.0, 5.0)  
 persona2.promedio_asignatura(4.5, 4.5, 3.0)
 
 #calcular imc
