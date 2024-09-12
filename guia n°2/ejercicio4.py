@@ -8,17 +8,17 @@ class Pedido:
         self.total = 0.0  # Total del pedido
     
     def añadir_plato(self, nombre_plato, precio):
-        """Añadir un plato al pedido con su nombre y precio"""
-        # Agregar el plato a la lista y actualizar el total
+       
+     # Agregar el plato a la lista y actualiza el total
         self.platos.append((nombre_plato, precio))
-        self.total += precio  # Actualizar el total del pedido
+        self.total += precio                         # Actualizar el total del pedido
     
     def calcular_total(self):
-        """Retornar el total del pedido"""
-        return self.total  # Devolver el total
+        
+        return self.total  # Devuelve el total
     
     def __len__(self):
-        """Método mágico para contar el número de platos en el pedido"""
+         
         # Retornar el número de platos
         return len(self.platos)
     
