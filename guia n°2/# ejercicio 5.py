@@ -59,7 +59,7 @@ class Biblioteca:
         return '\n\n'.join(str(libro) for libro in self.libros.values())
 
 # Ejemplo de uso:
-libro1 = Libro("El Quijote", "Miguel de Cervantes", 1605, 5)
+libro1 = Libro("El hobbit", " J.R.R. Tolkien", 1937, 5)
 libro2 = Libro("Percy Jackson", "Rick Riordan", 2006, 3)
 
 biblioteca = Biblioteca()
@@ -69,8 +69,8 @@ biblioteca.agregar_libro(libro2)
 print("Biblioteca después de agregar libros:")
 print(biblioteca)
 
-print("\nBuscar libro 'El Quijote':")
-print(biblioteca.buscar_libro_por_titulo("El Quijote"))
+print("\nBuscar libro 'El hobbit':")
+print(biblioteca.buscar_libro_por_titulo("El hobbit"))
 
 print("\nActualizar la cantidad disponible de 'Percy Jackson' a 10:")
 biblioteca.actualizar_libro("Percy Jackson", 10)
