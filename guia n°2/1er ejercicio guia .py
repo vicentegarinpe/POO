@@ -1,6 +1,6 @@
 #ejercicio 1
 
-class ReservaHostal:
+class ReservaHostal:           # creamos clase reserva de hotel
     def __init__(self, nombre_cliente, fecha_entrada, fecha_salida, numero_habitacion):
         # Variables para guardar la info de la reserva
         self.nombre_cliente = nombre_cliente
@@ -9,7 +9,7 @@ class ReservaHostal:
         self.numero_habitacion = numero_habitacion
 
     def calcular_duracion_estadia(self):
-       
+       #inicializamos listas para guardar la informacion
         fecha_entrada = list(map(int, self.fecha_entrada.split('-')))
         fecha_salida = list(map(int, self.fecha_salida.split('-')))
         
@@ -28,7 +28,7 @@ class ReservaHostal:
       
         self.fecha_salida = nueva_fecha_salida
 
-    def __str__(self):
+    def __str__(self):           # metdo magico de cadena de texto 
        
         return (f"Reserva de {self.nombre_cliente}\n"
                 f"Habitación: {self.numero_habitacion}\n"
@@ -36,8 +36,8 @@ class ReservaHostal:
                 f"Fecha de salida: {self.fecha_salida}\n"
                 f"Duración de la estadía: {self.calcular_duracion_estadia()} días")
 
-    def cancelar_reserva(self):
-        """Elimina la reserva e imprime un mensaje de cancelación."""
+    def cancelar_reserva(self):            # definimos este metodo para cancelar las reservas hechas 
+        #Elimina la reserva e imprime un mensaje de cancelación.
         print(f"Reserva de {self.nombre_cliente} en la habitación {self.numero_habitacion} ha sido cancelada.")
         del self
 
