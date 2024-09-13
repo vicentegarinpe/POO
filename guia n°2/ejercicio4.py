@@ -15,15 +15,15 @@ class Pedido:
     
     def calcular_total(self):
         
-        return self.total  # Devuelve el total
+        return self.total  # Devuelve el total del pedido
     
     def __len__(self):
          
         # Retornar el número de platos
         return len(self.platos)
     
-    def __add__(self, otro_pedido):
-        """Método mágico para combinar dos pedidos de la misma mesa"""
+    def __add__(self, otro_pedido):    #Método mágico para combinar dos pedidos de la misma mesa
+        
         # Comprobar si ambos pedidos son de la misma mesa
         if self.numero_mesa == otro_pedido.numero_mesa:
             nuevo_pedido = Pedido(self.numero_mesa)  # Crear un nuevo pedido combinado
@@ -32,10 +32,10 @@ class Pedido:
             nuevo_pedido.total = self.total + otro_pedido.total
             return nuevo_pedido  # Devolver el pedido combinado
         else:
-            raise ValueError("Los pedidos son de mesas diferentes, no se pueden combinar.")
+            raise ValueError("Los pedidos son de mesas diferentes, no se pueden combinar.") # aqui se utiliza raise y value error para que lanze una excepcion porque no se pueden combinar 
     
-    def __del__(self):
-        """Método finalizador que se llama al eliminar el pedido"""
+    def __del__(self): #Método finalizador que se llama al eliminar el pedido
+       
         # Mostrar un mensaje cuando se elimina el pedido
         print(f"El pedido de la mesa {self.numero_mesa} ha sido completado.")
 
@@ -45,8 +45,8 @@ if __name__ == "__main__":
     pedido1 = Pedido(numero_mesa=1)
     
     # Añadir platos al pedido
-    pedido1.añadir_plato("Hamburguesa", 10.0)
-    pedido1.añadir_plato("Refresco", 2.5)
+    pedido1.añadir_plato("completo italiano", 10.0)
+    pedido1.añadir_plato("bebida limon soda", 2.5)
     
     # Ver el total del pedido
     print(f"Total del pedido: ${pedido1.calcular_total():.2f}")
@@ -67,3 +67,4 @@ if __name__ == "__main__":
     
     # Eliminar el pedido combinado (pongo el método __del__)
     del pedido_combined
+
