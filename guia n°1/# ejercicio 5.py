@@ -2,7 +2,7 @@
 
 class Libro:
     def __init__(self, titulo, autor, año_publicacion, cantidad_disponible):
-        #Inicia ellibro con el título, autor, año de publicación y cantidad disponible.
+         # Asignamos los valores a los atributos del libro.
         self.titulo = titulo
         self.autor = autor
         self.año_publicacion = año_publicacion
@@ -10,10 +10,10 @@ class Libro:
 
     def actualizar_cantidad(self, cantidad):
        
-        if cantidad < 0:                               # actualiza CANtidad de libros
+        if cantidad < 0:                   # Si la cantidad es menor a 0, muestra un mensaje de error y no actualiza la cantidad.
             print("Error: La cantidad no puede ser negativa.")
             return
-        self.cantidad_disponible = cantidad
+        self.cantidad_disponible = cantidad      # Actualiza la cantidad disponible del libro con el valor proporcionado.       
 
     def __str__(self):            # metodo magico de cadena de texto
         
@@ -22,13 +22,13 @@ class Libro:
                 f"Año de publicación: {self.año_publicacion}\n"
                 f"Cantidad disponible: {self.cantidad_disponible}")
 
-class Biblioteca:
+class Biblioteca:      #creamos la clase biblioteca para poder manejar los libros 
     def __init__(self):
         
-        self.libros = {}
+        self.libros = {} # El diccionario almacenará los libros con el título como clave
 
-    def agregar_libro(self, libro):          # metodo para agregar libros a la bliblioteca
-        
+    def agregar_libro(self, libro):           #usamos este Método para actualizar la cantidad disponible de un libro por su título.
+           # Si el libro ya existe (según el título), actualiza su cantidad.
         if libro.titulo in self.libros:
             #actualiza los libros
             libro_existente = self.libros[libro.titulo]
@@ -53,7 +53,7 @@ class Biblioteca:
         else:
             return "Libro no encontrado."
 
-    def __str__(self):             # str para cadena de texto
+    def __str__(self):              # Método mágico para devolver una representación en cadena de la biblioteca.
         if not self.libros:
             return "La biblioteca está vacía."
         return '\n\n'.join(str(libro) for libro in self.libros.values()) # y lo que devuelve la cadena es que la biblioteca esta vacia 

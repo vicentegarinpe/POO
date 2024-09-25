@@ -20,13 +20,13 @@ class Pedido:
     def __len__(self):
          
         # Retornar el número de platos
-        return len(self.platos)
+        return len(self.platos)      # retornamos el numero de platos con len que cuenta la cantidad de cadenas
     
     def __add__(self, otro_pedido):    #Método mágico para combinar dos pedidos de la misma mesa
         
         # Comprobar si ambos pedidos son de la misma mesa
         if self.numero_mesa == otro_pedido.numero_mesa:
-            nuevo_pedido = Pedido(self.numero_mesa)  # Crear un nuevo pedido combinado
+            nuevo_pedido = Pedido(self.numero_mesa)  # Crear un nuevo pedido 
             # Combinar los platos y actualizar el total
             nuevo_pedido.platos = self.platos + otro_pedido.platos
             nuevo_pedido.total = self.total + otro_pedido.total
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     pedido2.añadir_plato("pollo con papas fritas", 3.0)
     
     # Combinar los pedidos de las mesas
-    pedido_combined = pedido1 + pedido2
+    pedido_combined = pedido1 + pedido2  # Combina ambos pedidos de la mesa 1
     print(f"Total del pedido combinado: ${pedido_combined.calcular_total():.2f}")
     
     # Contar el número de platos en el pedido combinado
