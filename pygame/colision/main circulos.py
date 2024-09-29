@@ -1,5 +1,5 @@
 import pygame
-from circle import Circle  # Importar la clase Circle desde el archivo circle.py
+from pygame.colision.circle import Circle  # Importar la clase Circle desde el archivo circle.py
 
 # Inicialización de Pygame
 pygame.init()
