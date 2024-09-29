@@ -52,7 +52,7 @@ def main():
         if keys[pygame.K_s]:
             circle1.move(0, speed)
         if keys[pygame.K_a]:
-            circle1.move(-speed, 0)
+            circle1.move(-speed, 0) 
         if keys[pygame.K_d]:
             circle1.move(speed, 0)
 
