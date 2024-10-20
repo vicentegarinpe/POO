@@ -27,8 +27,8 @@ class Empleado(): #inicialize la clase de Empkleado
         estado = "activo" if self.E_de_empleo else "inactivo"         # aqui intente printear todo como cadena con el metodo de str
         return (f"El empleado {self.__nombre} cuyo salario es de {self.__salario},y el estado de del empleado es: {estado}")
     
-    def get_nombre(self): # intente consultar el nombre que es privado con get pero no sirvio
-       return self.__nombre
+    #def get_nombre(self): # intente consultar el nombre que es privado con get pero no sirvio
+       #return self.__nombre
 
     def modificar_salario(self,nuevo_salario):
         self.__salario=nuevo_salario
@@ -51,12 +51,14 @@ print(empleado1)
 print(empleado2)
 print(empleado3)
 
+
 empleado1.modificar_salario(5600)
 
 empleado1.consultar_estado()
 empleado2.consultar_estado()
 empleado3.consultar_estado()
 
-
-
+#con esto se puede ocupar el get para conusltar un dato privado 
+#nombre_empleado1 = empleado1.get_nombre()
+#print(f"El nombre del empleado 1 es: {nombre_empleado1}")
 
