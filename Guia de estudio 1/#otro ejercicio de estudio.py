@@ -7,7 +7,7 @@ class Usuario():
         self.t_membresia = t_membresia
 
     def __str__(self):
-        return f"El nombre del cliente es {self.__nombre}"
+        return f"El nombre del cliente es {self.__nombre} y su edad es {self.__edad}"
 
     def imc(self):
         imc = self.__peso / self.__altura ** 2
